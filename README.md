@@ -143,4 +143,4 @@ unsigned char tileset[] =
 };
 ```
 
-Well, it does what it's supposed to. Please do not explain me that I know nothing about GB programming or that this code is not usefull in 2024 compared to Python codes, I yet know that.
+Well, it does what it's supposed to. Please do not come to explain me that I know nothing about GB programming or that this code is not usefull in 2024 compared to Python codes, it's true, I yet know that.
