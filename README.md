@@ -146,4 +146,4 @@ unsigned char tileset[] =
 Well, it does what it's supposed to. 
 
 ## Kind warning
-Please do not come to explain me that I know nothing about GB programming or that this code is not usefull in 2024 compared to Python codes, it's true, I yet know that. Enjoy it or move on.
+Please do not come to explain me that I know nothing about GB programming or that this code is not usefull for you compared to Python codes, it's true, I yet know that. Move on if you're not happy with that.
