@@ -149,6 +149,3 @@ unsigned char tileset[] =
 ```
 
 Well, it does what it's supposed to do. 
-
-## Kind warning
-Please do not come to explain me that I know nothing about GB programming or that this code is not usefull for you, I don't care your opinion.
