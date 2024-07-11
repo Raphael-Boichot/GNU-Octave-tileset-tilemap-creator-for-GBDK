@@ -15,7 +15,7 @@ for i=1:1:height
 end
 imwrite(im,'Test_image.png');
 if flag==1
-    disp('A color has n=been changed')
+    disp('A color has been swapped')
 else
     disp('No color has been changed')
 end
