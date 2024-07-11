@@ -18,5 +18,5 @@ I used this code a lot with the old version of GBDK around 2018/2019 to make (un
 - if the image is more than 4 colors, use the [color swapper code](/Color_swapper.m) to fix it and reduce the color number.
 - enjoy
 
-## Example of graphical code output
+## Example of graphical code output with the provided test image
 ![](/Output.png)
