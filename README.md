@@ -1,6 +1,6 @@
 # Tileset/Tilemap creator for GBDK written in GNU Octave/Matlab
 
-I used this code a lot with the old version of GBDK around 2018/2019 to make (unpublished) custom roms. It must be compatible with GBDK2020. This code is better here than rotting on my hard drive. It is completely outdated compared to current Python scripts doing the same, but who knows, maybe it could still present an interest for some folk on internet. It can be used for sprites or background. I've created this tool because I was not satisfied with the online ones at this time.
+I used this code a lot with the old version of GBDK around 2018/2019 to make (unpublished) custom roms. It must be compatible with GBDK2020. This code is better here than rotting on my hard drive. It is completely outdated compared to current Python scripts doing the same, but who knows, maybe it could still present an interest for some folk on internet. It can be used for sprites or background. I've created this tool because I was not satisfied with the existing ones at this time.
 
 ## What is the code doing ?
 - it takes any image in png, 4 colors, and searches recursively for unique tiles among the whole image.
@@ -21,7 +21,7 @@ I used this code a lot with the old version of GBDK around 2018/2019 to make (un
 ## Example of graphical code output with the provided test image
 ![](/Output.png)
 
-Unique tiles are marked with a green square, redunding tiles are marqued with a red cross. The "VRAM" figure displays the unique tiles and there probable position in Game Boy VRAM.
+Unique tiles are marked with a green square, redunding tiles are marqued with a red cross. The "VRAM" figure displays the unique tiles and their probable position in Game Boy VRAM.
 
 ## Example of text code output with the provided test image
 
@@ -143,4 +143,7 @@ unsigned char tileset[] =
 };
 ```
 
-Well, it does what it's supposed to. Please do not come to explain me that I know nothing about GB programming or that this code is not usefull in 2024 compared to Python codes, it's true, I yet know that.
+Well, it does what it's supposed to. 
+
+## Kind warning
+Please do not come to explain me that I know nothing about GB programming or that this code is not usefull in 2024 compared to Python codes, it's true, I yet know that. Enjoy it or move on.
