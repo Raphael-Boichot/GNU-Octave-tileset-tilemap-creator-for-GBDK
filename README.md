@@ -7,7 +7,7 @@ I used this code a lot with the old version of GBDK around 2018/2019 to make (un
 - it renders the search in a fancy graphical output to guide/help user simplifying the image if two close tiles can be just copied for example.
 - it converts the image in tileset and tilemap compatible with GBDK with only unique tiles taken into account.
 
-## What is code NOT doing ?
+## What is the code NOT doing ?
 - the code does not detect tiles identical by flipping/rotation even if this is very easy to include in the current version.
 - the code does not care the image size so it's up to you respect the Game Boy screen dimensions to make a level editor with it for example.
 - it is intended to be used as a single script but it can be turned easily into a function to automate scripting during code compilation.
@@ -143,4 +143,4 @@ unsigned char tileset[] =
 };
 ```
 
-Well, it does what it's supposed to.
+Well, it does what it's supposed to. Please do not explain me that I know nothing about GB programming or that this code is not usefull in 2024 compared to Python codes, I yet know that.
