@@ -1,6 +1,6 @@
 # Tileset/Tilemap creator for GBDK written in GNU Octave/Matlab
 
-I used this code a lot with the old version of GBDK around 2018/2019 to make (unpublished) custom roms. It must be compatible with GBDK2020. This code is better here than rotting on my hard drive. It is completely outdated compared to current Python scripts doing the same, but who knows, maybe it could still present an interest for some folk on internet. It can be used for sprites or background.
+I used this code a lot with the old version of GBDK around 2018/2019 to make (unpublished) custom roms. It must be compatible with GBDK2020. This code is better here than rotting on my hard drive. It is completely outdated compared to current Python scripts doing the same, but who knows, maybe it could still present an interest for some folk on internet. It can be used for sprites or background. I've created this tool because I was not satisfied with the online ones at this time.
 
 ## What is the code doing ?
 - it takes any image in png, 4 colors, and searches recursively for unique tiles among the whole image.
@@ -16,10 +16,12 @@ I used this code a lot with the old version of GBDK around 2018/2019 to make (un
 - install [GNU Octave](https://octave.org/) or use your pricey Matlab licence
 - just edit the [image name](https://github.com/Raphael-Boichot/GNU-Octave-tileset-tilemap-creator-for-GBDK/blob/ca894bc3ff5463393935c4b1e606610a5f718c7b/Tile_creator_GBDK.m#L4) to target your image.
 - if the image is more than 4 colors, use the [color swapper code](/Color_swapper.m) to fix it and reduce the color number.
-- enjoy
+- enjoy this simple tool.
 
 ## Example of graphical code output with the provided test image
 ![](/Output.png)
+
+Unique tiles are marked with a green square, redunding tiles are marqued with a red cross. The "VRAM" figure displays the unique tiles and there probable position in Game Boy VRAM.
 
 ## Example of text code output with the provided test image
 
@@ -140,3 +142,5 @@ unsigned char tileset[] =
 0x10,0x30,0x80,0x20,0x40,0xC0,0x00,0xC0,0x00,0x80,0x00,0x00,0x00,0x00,0x00,0x00
 };
 ```
+
+Well, it does what it's supposed to.
