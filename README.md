@@ -21,7 +21,7 @@ I used this code a lot with the old version of GBDK around 2018/2019 to make (un
 ## Example of graphical code output with the provided test image
 ![](/Output.png)
 
-Unique tiles are marked with a green square, redunding tiles are marqued with a red cross. The "VRAM" figure displays the unique tiles and their probable position in Game Boy VRAM.
+Unique tiles are marked with a green square, redunding tiles are marqued with a red cross. The "VRAM" figure displays the unique tiles and their probable arrangement in Game Boy VRAM when the test image is displayed as background.
 
 ## Example of text code output with the provided test image
 
@@ -148,7 +148,7 @@ unsigned char tileset[] =
 };
 ```
 
-Well, it does what it's supposed to. 
+Well, it does what it's supposed to do. 
 
 ## Kind warning
-Please do not come to explain me that I know nothing about GB programming or that this code is not usefull for you compared to Python codes, it's true, I yet know that. Move on if you're not happy with that.
+Please do not come to explain me that I know nothing about GB programming or that this code is not usefull for you compared to Python codes, I don't care. Move on if you're not happy with that.
