@@ -28,6 +28,7 @@ Unique tiles are marked with a green square, redunding tiles are marqued with a 
 ## Example of text code output with the provided test image
 
 The 160*144 test image, supposed to fill a complete Game Boy Screen (90 unique tiles).
+
 ![](/Test_image.png)
 
 The tilemap is presented with one width of screen (20 tiles or 160*8 pixels) per line of data but GBDK does not care, it's just for ease of reading.
