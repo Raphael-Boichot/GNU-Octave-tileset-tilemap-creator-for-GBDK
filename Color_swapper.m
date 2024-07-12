@@ -1,8 +1,11 @@
+%this code changes one color at a time
+clc
+clear
 im=imread('Test_image.png');
-im=im(:,:,1);
+im=im(:,:,1);%only one layer is kept so image will become grayscale at the end
 palette=unique(im)
 if length(palette)>4
-    msgbox('The color number is up to 4, results are unpredictable !');
+    disp('The color number is up to 4 !');
 end
 [height,width,null]=size(im);
 flag=0;
