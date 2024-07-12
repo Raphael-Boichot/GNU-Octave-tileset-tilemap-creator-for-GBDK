@@ -8,7 +8,7 @@ end
 flag=0;
 for i=1:1:height
     for j=1:1:width
-        if im(i,j)==128;im(i,j)=170;
+        if im(i,j)==128;im(i,j)=170; %here 128 is the color to replace, 170 the new color
             flag=1;
         end
     end
