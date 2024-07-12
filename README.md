@@ -12,6 +12,7 @@ I used this code a lot with the first version of GBDK, around 2018/2019, to make
 - the code does not care the whole image size so it's up to you respect the Game Boy screen dimensions to make a level editor with it for example.
 - it is intended to be used as a single script but it can be turned easily into a function to automate scripting during code compilation.
 - it does not create ASM and binary output but it may be very easy to code these features from this base.
+- it does not stop if the number of tiles is up to 255 for tilemap, it's up to you to check that.
 
 ## How to use it ?
 - install [GNU Octave](https://octave.org/) or use your pricey Matlab licence.
@@ -26,6 +27,7 @@ Unique tiles are marked with a green square, redunding tiles are marqued with a 
 
 ## Example of text code output with the provided test image
 
+The 160*144 test image, supposed to fill a complete Game Boy Screen (90 unique tiles).
 ![](/Test_image.png)
 
 The tilemap is presented with one width of screen (20 tiles or 160*8 pixels) per line of data but GBDK does not care, it's just for ease of reading.
