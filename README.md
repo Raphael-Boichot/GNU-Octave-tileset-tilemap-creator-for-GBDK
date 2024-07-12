@@ -1,21 +1,22 @@
 # Tileset/Tilemap creator for GBDK written in GNU Octave/Matlab
 
-I used this code a lot with the old version of GBDK around 2018/2019 to make (unpublished) custom roms. It must be compatible with GBDK2020. This code is better here than rotting on my hard drive. It is completely outdated compared to current Python scripts doing the same, but who knows, maybe it could still present an interest for some folk on internet. It can be used for sprites or background. I've created this tool because I was not satisfied with the existing ones at this time.
+I used this code a lot with the first version of GBDK, around 2018/2019, to make (unpublished) custom roms. This code is better here than rotting on my hard drive. It is probably outdated compared to current Python scripts doing the same for GBDK2020, but who knows, maybe it could still present an interest for some folk on internet. It can be used for sprites or background conversion. I've created this code out of curiosity to understand the tile encoding format on Game Boy. Functions are very similar to [Pic2tiles](http://www.budmelvin.com/dev/index.html) whick serves as inspiration.
 
 ## What is the code doing ?
-- it takes any image in png, 4 colors, and searches recursively for unique tiles among the whole image.
-- it renders the search in a fancy graphical output to guide/help user simplifying the image if two close tiles can be just copied for example.
+- it takes any image in any lossless format (BMP, PNG, GIF, etc.), 4 colors, multiple of 8x8 pixels, and searches recursively for unique tiles among the whole image.
+- it renders the search in a fancy graphical output to guide/help user simplifying the image if two very similar tiles can just be merdeg for example.
 - it converts the image in tileset and tilemap compatible with GBDK with only unique tiles taken into account.
 
 ## What is the code NOT doing ?
 - the code does not detect tiles identical by flipping/rotation even if this is very easy to include in the current version.
-- the code does not care the image size so it's up to you respect the Game Boy screen dimensions to make a level editor with it for example.
+- the code does not care the whole image size so it's up to you respect the Game Boy screen dimensions to make a level editor with it for example.
 - it is intended to be used as a single script but it can be turned easily into a function to automate scripting during code compilation.
+- it does not create ASM and binary output but it may be very easy to code from this base.
 
 ## How to use it ?
-- install [GNU Octave](https://octave.org/) or use your pricey Matlab licence
+- install [GNU Octave](https://octave.org/) or use your pricey Matlab licence.
 - just edit the [image name](https://github.com/Raphael-Boichot/GNU-Octave-tileset-tilemap-creator-for-GBDK/blob/ca894bc3ff5463393935c4b1e606610a5f718c7b/Tile_creator_GBDK.m#L4) to target your image.
-- if the image is more than 4 colors, use the [color swapper code](/Color_swapper.m) to fix it and reduce the color number.
+- if the image is more than 4 colors, use the [color swapper code](/Color_swapper.m) to fix it and reduce the color number one by one.
 - enjoy this simple tool.
 
 ## Example of graphical code output with the provided test image
@@ -24,7 +25,6 @@ I used this code a lot with the old version of GBDK around 2018/2019 to make (un
 Unique tiles are marked with a green square, redunding tiles are marqued with a red cross. The "VRAM" figure displays the unique tiles and their probable arrangement in Game Boy VRAM when the test image is displayed as background.
 
 ## Example of text code output with the provided test image
-
 
 The tilemap is presented with one width of screen (20 tiles or 160*8 pixels) per line of data but GBDK does not care, it's just for ease of reading.
 ```c
