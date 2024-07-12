@@ -1,6 +1,6 @@
 # Tileset/Tilemap creator for GBDK written in GNU Octave/Matlab
 
-I used this code a lot with the first version of GBDK, around 2018/2019, to make (unpublished) custom roms. This code is better here than rotting on my hard drive. It is probably outdated compared to current Python scripts doing the same for GBDK2020, but who knows, maybe it could still present an interest for some folk on internet. It can be used for sprites or background conversion. I've created this code out of curiosity to understand the tile encoding format on Game Boy. Functions are very similar to [Pic2tiles](http://www.budmelvin.com/dev/index.html) whick serves as inspiration.
+I used this code a lot with the first version of GBDK, around 2018/2019, to make (unpublished) custom roms. This code is better here than rotting on my hard drive. It is probably outdated compared to current Python scripts doing the same for GBDK2020, but who knows, maybe it could still present an interest for some folk on internet. It can be used for sprites or background conversion. I've created this code out of curiosity to understand the tile encoding format on Game Boy. Functions are very similar to [Pic2tiles](http://www.budmelvin.com/dev/index.html) made by Bud Melvin which serves as inspiration.
 
 ## What is the code doing ?
 - it takes any image in any lossless format (BMP, PNG, GIF, etc.), 4 colors, multiple of 8x8 pixels, and searches recursively for unique tiles among the whole image.
@@ -11,7 +11,7 @@ I used this code a lot with the first version of GBDK, around 2018/2019, to make
 - the code does not detect tiles identical by flipping/rotation even if this is very easy to include in the current version.
 - the code does not care the whole image size so it's up to you respect the Game Boy screen dimensions to make a level editor with it for example.
 - it is intended to be used as a single script but it can be turned easily into a function to automate scripting during code compilation.
-- it does not create ASM and binary output but it may be very easy to code from this base.
+- it does not create ASM and binary output but it may be very easy to code these features from this base.
 
 ## How to use it ?
 - install [GNU Octave](https://octave.org/) or use your pricey Matlab licence.
@@ -25,6 +25,8 @@ I used this code a lot with the first version of GBDK, around 2018/2019, to make
 Unique tiles are marked with a green square, redunding tiles are marqued with a red cross. The "VRAM" figure displays the unique tiles and their probable arrangement in Game Boy VRAM when the test image is displayed as background.
 
 ## Example of text code output with the provided test image
+
+![](/Test_image.png)
 
 The tilemap is presented with one width of screen (20 tiles or 160*8 pixels) per line of data but GBDK does not care, it's just for ease of reading.
 ```c
