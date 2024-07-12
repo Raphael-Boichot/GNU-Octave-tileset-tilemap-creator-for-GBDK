@@ -1,6 +1,6 @@
 # Tileset/Tilemap creator for GBDK written in GNU Octave/Matlab
 
-I used this code a lot with the first version of GBDK, around 2018/2019, to make (unpublished) custom roms. This code is better here than rotting on my hard drive. It is probably outdated compared to current Python scripts doing the same for GBDK2020, but who knows, maybe it could still present an interest for some folk on internet. It can be used for sprites or background conversion. I've created this code out of curiosity to understand the tile encoding format on Game Boy. Functions are very similar to [Pic2tiles](http://www.budmelvin.com/dev/index.html) made by Bud Melvin which serves as inspiration.
+I used this code a lot with the first version of GBDK, around 2018/2019, to make (unpublished) custom roms. This code is better here than rotting on my hard drive. It is probably outdated compared to current Python scripts doing the same for GBDK2020, but who knows, maybe it could still present an interest for some folk on internet. It can be used for sprites or background conversion. I've created this code out of curiosity to understand the [tile encoding format](https://www.huderlem.com/demos/gameboy2bpp.html) on Game Boy. Functions are very similar to [Pic2tiles](http://www.budmelvin.com/dev/index.html) made by Bud Melvin which serves as inspiration.
 
 ## What is the code doing ?
 - it takes any image in any lossless format (BMP, PNG, GIF, etc.), 4 colors, multiple of 8x8 pixels, and searches recursively for unique tiles among the whole image.
