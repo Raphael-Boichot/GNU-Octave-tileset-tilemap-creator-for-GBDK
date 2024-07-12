@@ -27,7 +27,7 @@ Unique tiles are marked with a green square, redunding tiles are marqued with a 
 
 ## Example of text code output with the provided test image
 
-The 160*144 test image, supposed to fill a complete Game Boy Screen (90 unique tiles).
+The 160x144 test image, supposed to fill a complete Game Boy Screen (90 unique tiles).
 
 ![](/Test_image.png)
 
