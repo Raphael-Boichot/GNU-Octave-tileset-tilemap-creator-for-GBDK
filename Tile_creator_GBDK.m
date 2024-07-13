@@ -64,10 +64,10 @@ for x=1:1:hor_tile
         if flag==1
             plot([L-1/2,L-1/2+8], [H-1/2,H-1/2+8] ,'r')
             plot([L-1/2+8,L-1/2], [H-1/2,H+8-1/2] ,'r')
-            text(L+1,H+3,dec2hex(pos_identical-1),'Color','magenta','FontSize',8)
+            text(L+2,H+3,dec2hex(pos_identical-1,2),'Color','magenta','FontSize',8)
         else
             rectangle('Position',[L-1/2 H-1/2 8 8],'EdgeColor','g')
-            text(L+1,H+3,dec2hex(pos-1),'Color','magenta','FontSize',8)
+            text(L+2,H+3,dec2hex(pos-1,2),'Color','magenta','FontSize',8)
             title(['Number of unique tiles: ', num2str(pos)])
         end
         hold off
@@ -80,6 +80,7 @@ for x=1:1:hor_tile
             H_tile=H_tile+1;
         end
     end
+  drawnow
 end
 drawnow
 
@@ -173,7 +174,7 @@ H=1;
 L=1;
 for p=1:1:pos
     rectangle('Position',[L-1/2 H-1/2 8 8],'EdgeColor','g')
-    text(L+1,H+3,dec2hex(p-1),'Color','magenta','FontSize',8)
+    text(L+2,H+3,dec2hex(p-1,2),'Color','magenta','FontSize',8)
     L=L+8;
     if L>=memory_width
         L=1;
