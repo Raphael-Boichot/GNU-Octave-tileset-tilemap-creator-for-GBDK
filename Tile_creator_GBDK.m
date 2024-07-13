@@ -2,7 +2,7 @@ clc;
 clear;
 close all;
 a=imread("Test_image.png");
-figure(1)
+figure('Position',[100 100 1100 700]);
 subplot(1,2,1)
 imshow(a)
 [height, width, ~]=size(a);
@@ -62,14 +62,15 @@ for x=1:1:hor_tile
         end
         hold on
         if flag==1
-            plot([L,L+8], [H,H+8] ,'r')
-            plot([L+8,L], [H,H+8] ,'r')
+            plot([L-1/2,L-1/2+8], [H-1/2,H-1/2+8] ,'r')
+            plot([L-1/2+8,L-1/2], [H-1/2,H+8-1/2] ,'r')
+            text(L+1,H+3,dec2hex(pos_identical-1),'Color','magenta','FontSize',8)
         else
-        rectangle('Position',[L H 8 8],'EdgeColor','g')
-        title(['Number of unique tiles: ', num2str(pos)])
+            rectangle('Position',[L-1/2 H-1/2 8 8],'EdgeColor','g')
+            text(L+1,H+3,dec2hex(pos-1),'Color','magenta','FontSize',8)
+            title(['Number of unique tiles: ', num2str(pos)])
         end
         hold off
-        drawnow
         L=L+8;
         L_tile=L_tile+1;
         if L>=width
@@ -80,6 +81,7 @@ for x=1:1:hor_tile
         end
     end
 end
+drawnow
 
 %this part creates a C file for tilemap
 Tile_map=Tile_map-1;
@@ -151,6 +153,7 @@ H=1;
 L=1;
 memory=0;
 memory_width=128;
+
 for p=1:1:pos
     b=unique_tiles(:,:,p);
     memory((H:H+7),(L:L+7))=b;
@@ -161,17 +164,25 @@ for p=1:1:pos
     end
 end
 
-
 subplot(1,2,2)
-imshow(uint8(memory));
-title('VRAM')
-
 hold on
+imshow(uint8(memory));
 tiles_lacking=ceil((memory_width-L)/8);
+
+H=1;
+L=1;
+for p=1:1:pos
+    rectangle('Position',[L-1/2 H-1/2 8 8],'EdgeColor','g')
+    text(L+1,H+3,dec2hex(p-1),'Color','magenta','FontSize',8)
+    L=L+8;
+    if L>=memory_width
+        L=1;
+        H=H+8;
+    end
+end
+
 for p=1:1:tiles_lacking
-    rectangle('Position',[L H 8 8],'FaceColor','y')
-    plot([L,L+8], [H,H+8] ,'r')
-    plot([L+8,L], [H,H+8] ,'r')
+    rectangle('Position',[L-1/2 H-1/2 8 8],'FaceColor','y')
     L=L+8;
     if L>=memory_width
         L=1;
@@ -179,6 +190,8 @@ for p=1:1:tiles_lacking
     end
 end
 hold off
+
+title('VRAM')
 drawnow
 
 saveas(gcf,'Output.png');
