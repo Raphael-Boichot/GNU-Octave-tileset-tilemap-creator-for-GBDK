@@ -25,6 +25,9 @@ I used this code a lot with the first version of GBDK, around 2018/2019, to make
 
 Unique tiles are marked with a green square, redunding tiles are marqued with a red cross. The "VRAM" figure displays the unique tiles and their probable arrangement in Game Boy VRAM when the test image is displayed as background.
 
+## Another Example of graphical code output
+![](/Output_2.png)
+
 ## Example of text code output with the provided test image
 
 The 160x144 test image, supposed to fill a complete Game Boy Screen (90 unique tiles).
