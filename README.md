@@ -28,6 +28,7 @@ Unique tiles are marked with a green square, redunding tiles are marqued with a 
 ## Other examples of graphical code output
 ![](/Output_2.png)
 ![](/Output_3.png)
+![](/Output_4.png)
 
 ## Example of text code output with the provided test image
 
