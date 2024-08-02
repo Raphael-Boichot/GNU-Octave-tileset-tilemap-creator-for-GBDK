@@ -85,4 +85,4 @@ unsigned char tileset[] =
 };
 ```
 
-Well, it does what it's supposed to do. 
+Well, it does what it's supposed to do. I hope it could have an interest for somebody on Earth.
